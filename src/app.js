@@ -1,27 +1,18 @@
-import { LightningElement } from "lwc";
+import { LightningElement, api } from "lwc";
+
 
 export default class App extends LightningElement {
-  title = "Welcome to Lightning Web Components!";
+  
+  privateTitle;
 
-  showFeatures = true;
-
-  /**
-   * Getter for the features property
-   */
-  get features() {
-    return [
-      {
-        label: "Learn in the browser.",
-        icon: "utility:edit",
-      },
-      {
-        label: "View changes to code instantly with Live Compilation.",
-        icon: "utility:refresh",
-      },
-      {
-        label: "Style your components with SLDS.",
-        icon: "utility:brush",
-      },
-    ];
+  @api
+  get title(){
+      return this.privateTitle;
   }
+
+  set title(value){
+    this.privateTitle = value.toUpperCase();
+    this.setAttribute('title', this.privateTitle);
+  }
+
 }

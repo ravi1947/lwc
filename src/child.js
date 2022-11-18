@@ -5,5 +5,10 @@ import { LightningElement, api } from "lwc";
  */
 export default class Child extends LightningElement {
   @api
-  label = "";
+  label = "I am child";
+
+  @api
+  nameChange(strange){
+    this.label=strange;
+  }
 }
