@@ -1,0 +1,7 @@
+{
+  "name": "@wcd/ravi1947.lwc-lag79ti5",
+  "version": "0.0.0",
+  "scripts": {
+    "serve": "npx wcd-cli@latest serve EqeRJxFe1awlZPoLnLxI --open"
+  }
+}
